@@ -6,6 +6,9 @@
     <variable
       name="user"
       type="com.brian.databinging2.User"/>
+    <variable
+      name="handler"
+      type="com.brian.databinging2.Handler"/>
   </data>
   <RelativeLayout
     android:layout_width="match_parent"
@@ -24,7 +27,8 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_centerInParent="true"
-      android:text="@{user.firstName}"/>
+      android:text="@{user.firstName}"
+      android:onClick="@{handler::onClickFriend}"/>
     <TextView
       android:id="@+id/lastName"
       android:layout_below="@id/firstName"
