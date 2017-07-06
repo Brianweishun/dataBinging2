@@ -9,6 +9,9 @@
     <variable
       name="handler"
       type="com.brian.databinging2.Handler"/>
+    <variable
+      name="presenter"
+      type="com.brian.databinging2.Presenter"/>
   </data>
   <RelativeLayout
     android:layout_width="match_parent"
@@ -35,7 +38,8 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_centerInParent="true"
-      android:text="@{user.lastName}"/>
+      android:text="@{user.lastName}"
+      android:onClick="@{() -> presenter.onSaveClick(user)}"/>
     <Button
       android:id="@+id/button01"
       android:layout_width="wrap_content"

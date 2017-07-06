@@ -8,6 +8,7 @@ import android.view.View;
  */
 public class Handler {
   public void onClickFriend(View view) {
-    Log.d("brian", "onclick");
+    //Method References
+    Log.d("brian", "Handler onclick");
   }
 }

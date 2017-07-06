@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     Handler handler = new Handler();
     activityMainBinding.setHandler(handler);
 
+    activityMainBinding.setPresenter(new Presenter());
+
     activityMainBinding.textView
         .setText("Android Data Binding");
 
