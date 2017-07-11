@@ -13,6 +13,9 @@
     <variable
       name="presenter"
       type="com.brian.databinging2.Presenter"/>
+    <variable
+      name="product"
+      type="com.brian.databinging2.Product"/>
   </data>
   <RelativeLayout
     android:layout_width="match_parent"
@@ -23,7 +26,9 @@
       android:id="@+id/textView"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_centerInParent="true"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:text="@string/title01"
       android:textSize="20sp" />
     <TextView
       android:id="@+id/firstName"
@@ -44,12 +49,40 @@
       android:onClick="@{(view) -> presenter.onSaveClick(view, user)}"/>
     <Button
       android:id="@+id/button01"
-      android:text="@string/change_btn"
+      android:text="@string/changeUser_btn"
       android:layout_centerInParent="true"
       android:layout_below="@id/lastName"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:onClick="@{(view) -> presenter.onChange(view, user)}"/>
-
+    <TextView
+      android:id="@+id/title01"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/button01"
+      android:layout_centerInParent="true"
+      android:text="@string/title02"/>
+    <TextView
+      android:id="@+id/productName"
+      android:layout_below="@+id/title01"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:text="@{product.productName.get()}"/>
+    <TextView
+      android:id="@+id/productPrice"
+      android:layout_below="@+id/productName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:text="@{String.valueOf(product.productPrice)}"/>
+    <Button
+      android:id="@+id/button02"
+      android:text="@string/changeProduct_btn"
+      android:layout_centerInParent="true"
+      android:layout_below="@id/productPrice"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:onClick="@{(view) -> presenter.changeProduct(view, product)}"/>
   </RelativeLayout>
 </layout>

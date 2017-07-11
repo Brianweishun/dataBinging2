@@ -6,6 +6,7 @@ import android.databinding.Bindable;
 /**
  * Created by Brian_Chen on 04/07/2017.
  */
+//Observable Objects example
 public class User extends BaseObservable {
   public Boolean isShow;
   public String firstName;

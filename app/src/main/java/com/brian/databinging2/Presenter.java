@@ -15,4 +15,9 @@ public class Presenter {
     user.setFirstName("Marie");
     user.setLastName("Li");
   }
+
+  public void changeProduct(View view, Product product) {
+    product.productName.set("iphone");
+    product.productPrice.set(99);
+  }
 }

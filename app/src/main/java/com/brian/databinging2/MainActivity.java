@@ -25,8 +25,15 @@ public class MainActivity extends AppCompatActivity {
 
     activityMainBinding.setPresenter(new Presenter());
 
-    activityMainBinding.textView
-        .setText("Android Data Binding");
+    Product product = new Product();
+
+    activityMainBinding.setProduct(product);
+
+    product.productName.set("xbox");
+    product.productPrice.set(120);
+
+//    activityMainBinding.textView
+//        .setText("Android Data Binding");
 
 //    activityMainBinding.button01
   }
