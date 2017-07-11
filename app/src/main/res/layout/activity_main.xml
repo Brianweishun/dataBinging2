@@ -3,6 +3,7 @@
   xmlns:tools="http://schemas.android.com/tools">
 
   <data>
+    <import type="android.view.View"/>
     <variable
       name="user"
       type="com.brian.databinging2.User"/>
@@ -39,6 +40,7 @@
       android:layout_height="wrap_content"
       android:layout_centerInParent="true"
       android:text="@{user.lastName}"
+      android:visibility="@{user.isShow ? View.VISIBLE : View.GONE}"
       android:onClick="@{(view) -> presenter.onSaveClick(view, user)}"/>
     <Button
       android:id="@+id/button01"
