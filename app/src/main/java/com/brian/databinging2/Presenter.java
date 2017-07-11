@@ -9,6 +9,10 @@ import android.view.View;
 public class Presenter {
   public void onSaveClick(View view, User user){
     //Listener Bindings
-    Log.d("brian", "presenter onSaveClick " + user.getFirstName() + view.hasOnClickListeners());
+    Log.d("brian", "presenter onSaveClick " + user.getLastName() + view.hasOnClickListeners());
+  }
+  public void onChange(View view, User user) {
+    user.setFirstName("Marie");
+    user.setLastName("Li");
   }
 }
