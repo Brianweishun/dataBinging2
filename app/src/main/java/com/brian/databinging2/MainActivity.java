@@ -1,6 +1,8 @@
 package com.brian.databinging2;
 
 import android.databinding.DataBindingUtil;
+import android.databinding.ObservableArrayMap;
+import android.databinding.ObservableMap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import com.brian.databinging2.databinding.ActivityMainBinding;
@@ -32,9 +34,18 @@ public class MainActivity extends AppCompatActivity {
     product.productName.set("xbox");
     product.productPrice.set(120);
 
-//    activityMainBinding.textView
-//        .setText("Android Data Binding");
+    final ObservableMap<String, Object> map = new ObservableArrayMap<>();
+    map.put(Keys.name, "Brian");
+    map.put(Keys.age, 22);
+    activityMainBinding.setMap(map);
 
-//    activityMainBinding.button01
+    activityMainBinding.button03.setOnClickListener(new android.view.View.OnClickListener() {
+      @Override
+      public void onClick(android.view.View v) {
+        map.put(Keys.name,"hello");
+        map.put(Keys.age,20);
+      }
+    });
+
   }
 }

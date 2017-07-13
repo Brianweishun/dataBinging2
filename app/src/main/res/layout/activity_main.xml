@@ -4,6 +4,8 @@
 
   <data>
     <import type="android.view.View"/>
+    <import type="android.databinding.ObservableMap"/>
+    <import type="com.brian.databinging2.Keys"/>
     <variable
       name="user"
       type="com.brian.databinging2.User"/>
@@ -16,6 +18,9 @@
     <variable
       name="product"
       type="com.brian.databinging2.Product"/>
+    <variable
+      name="map"
+      type="ObservableMap&lt;String, Object&gt;"/>
   </data>
   <RelativeLayout
     android:layout_width="match_parent"
@@ -84,5 +89,33 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:onClick="@{(view) -> presenter.changeProduct(view, product)}"/>
+    <TextView
+      android:id="@+id/title02"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/button02"
+      android:layout_centerInParent="true"
+      android:text="@string/title03"/>
+    <TextView
+      android:id="@+id/mapName"
+      android:layout_below="@+id/title02"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:text='@{map[Keys.name]}'/>
+    <TextView
+      android:id="@+id/mapAge"
+      android:layout_below="@+id/mapName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:text='@{String.valueOf(1+(Integer)map[Keys.age])}'/>
+    <Button
+      android:id="@+id/button03"
+      android:text="@string/changeMap_btn"
+      android:layout_centerInParent="true"
+      android:layout_below="@id/mapAge"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
   </RelativeLayout>
 </layout>

@@ -3,6 +3,8 @@
   <string name="action_settings">Settings</string>
   <string name="title01">Android Data Binding</string>
   <string name="changeUser_btn">Change User</string>
-  <string name="title02">Android Data Binding ObservableField</string>
+  <string name="title02">Android Data Binding Observable Field</string>
   <string name="changeProduct_btn">Change Product</string>
+  <string name="title03">Android Data Binding Observable Collections</string>
+  <string name="changeMap_btn">Change Map</string>
 </resources>
